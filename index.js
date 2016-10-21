@@ -135,6 +135,7 @@ var handler = function handler(req, res) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Credentials', false);
         res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, HEAD, PATCH');
         res.setHeader('Expires', new Date(Date.now() + 86400000).toUTCString()); // one day in the future
         var options = handleOptions(res, req);
         var r = request(options);
